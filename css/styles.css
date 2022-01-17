@@ -41,12 +41,13 @@
   --secondary-font: 'Raleway', sans-serif;
   --main-color: #2196f3;
   /* ---dodatek--- */
-  --secondar-color: #cd329a;
+  --secondary-color: #cd329a;
 }
 
 body {
   font-family: var(--main-font);
   background-color: #ffffff;
+  width: 1600px;
 }
 
 /* === LOGO === */
@@ -65,6 +66,7 @@ body {
   line-height: 1.192;
   letter-spacing: 0.03em;
   text-decoration: none;
+  margin-right: 93px;
 }
 .web-item {
   color: var(--main-color);
@@ -90,17 +92,23 @@ body {
   color: var(--main-color);
 }
 .sub-navigation:active {
-  color: var(--secondar-color);
+  color: var(--secondary-color);
 }
 .navigation {
   cursor: pointer;
   list-style-type: none;
+  display: flex;
 }
+.navigation-list:not(:last-child) {
+  margin-right: 46px;
+}
+
 /* === END NAVIGATION === */
 
 /* === CONTACTS === */
 .contacts {
   list-style-type: none;
+  margin-left: auto;
 }
 .contacts-item {
   color: #757575;
@@ -112,13 +120,14 @@ body {
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
+  margin-right: 50px;
 }
 .contacts-item:hover,
 .contacts-item:focus {
   color: var(--main-color);
 }
 .contacts-item:active {
-  color: var(--secondar-color);
+  color: var(--secondary-color);
 }
 /* === END CONTACTS === */
 
@@ -141,7 +150,7 @@ body {
   color: var(--main-color);
 }
 .adress-item:active {
-  color: var(--secondar-color);
+  color: var(--secondary-color);
 }
 /* nadpisuje klasę "adress-item */
 .map {
@@ -159,6 +168,24 @@ body {
 }
 /* === END ADRESS === */
 
+/* === WRAPPER HEADER === */
+.wrapper-all-nav {
+  border-bottom: 1px solid #ececec;
+}
+.wrapper-all-nav .wrapper{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 24px auto;
+}
+
+.wrapper {
+  width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 /* === NAGŁÓWEK === */
 .main-title {
   font-family: var(--main-font);
@@ -170,10 +197,16 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+  width: 696px;
+  height: 120px;
+  margin: 0 auto; /* <-- czy to potrzebne do skalowania?*/
+  
 }
 .big-title {
   /*--- DODATEK dla widoczności--- */
   background-color: #2f303a;
+  padding: 200px 452px;
+  /* display: flex; */
 }
 .btn {
   background: var(--main-color);
@@ -191,12 +224,14 @@ body {
   color: #ffffff;
   cursor: pointer;
 }
+.btn-modal {
+}
 .btn:hover,
 .btn:focus {
   background: var(--main-color);
 }
 .btn:active {
-  background-color: var(--secondar-color);
+  background-color: var(--secondary-color);
 }
 /* === END NAGŁÓWEK === */
 
@@ -292,7 +327,7 @@ body {
   background-color: var(--main-color);
 }
 .btn-item:active {
-  background-color: var(--secondar-color);
+  background-color: var(--secondary-color);
 }
 /* === END BUTTON GROUP === */
 
