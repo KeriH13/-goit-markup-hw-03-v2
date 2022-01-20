@@ -49,7 +49,14 @@ body {
   background-color: #ffffff;
   width: 1600px;
 }
-
+h1, h2, h3, h4, h5, h6 , p ,ul, ol{
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+img {
+  display: block;
+}
 /* === LOGO === */
 .logo {
   /* 
@@ -172,18 +179,18 @@ body {
 .wrapper-all-nav {
   border-bottom: 1px solid #ececec;
 }
-.wrapper-all-nav .wrapper{
+.wrapper-all-nav .container{
   display: flex;
   align-items: center;
   height: 80px;
   padding: 24px auto;
 }
 
-.wrapper {
+.container {
   width: 1200px;
-  display: flex;
   margin: 0 auto;
   padding: 0 15px;
+  align-items: center;
 }
 
 /* === NAGŁÓWEK === */
@@ -200,7 +207,7 @@ body {
   width: 696px;
   height: 120px;
   margin: 0 auto; /* <-- czy to potrzebne do skalowania?*/
-  
+
 }
 .big-title {
   /*--- DODATEK dla widoczności--- */
@@ -274,6 +281,9 @@ body {
 /* === END SECOND TITLE(S) === */
 
 /* ===--- CZYM SIĘ ZAJMUJEMY (zdjęcia) /// ZESPÓŁ /// PROJECT/IMAGES---=== */
+.team {
+  background-color: #F5F4FA;
+}
 .item-list {
   list-style-type: none;
 }
