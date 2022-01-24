@@ -79,7 +79,7 @@ img {
   color: var(--main-color);
 }
 .studio-item {
-  color: #000000;
+  color: #000;
 }
 /* === END LOGO === */
 
@@ -185,7 +185,9 @@ img {
   height: 80px;
   padding: 24px auto;
 }
-
+.section {
+  padding: 94px 215px;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -193,7 +195,7 @@ img {
   align-items: center;
 }
 
-/* === NAGŁÓWEK === */
+/* === HEADER === */
 .main-title {
   font-family: var(--main-font);
   font-style: normal;
@@ -206,14 +208,17 @@ img {
   color: #ffffff;
   width: 696px;
   height: 120px;
-  margin: 0 auto; /* <-- czy to potrzebne do skalowania?*/
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;/* <-- czy to potrzebne do skalowania?*/
 
 }
 .big-title {
   /*--- DODATEK dla widoczności--- */
   background-color: #2f303a;
   padding: 200px 452px;
-  /* display: flex; */
+  display: flex; 
 }
 .btn {
   background: var(--main-color);
@@ -224,14 +229,19 @@ img {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
+  border: 0px;
+  min-width: 200px;
+  height: 50px;
+  margin-top: 30px;
 }
 .btn-modal {
+  display: flex;
+  justify-content: center;
 }
 .btn:hover,
 .btn:focus {
@@ -240,11 +250,22 @@ img {
 .btn:active {
   background-color: var(--secondary-color);
 }
-/* === END NAGŁÓWEK === */
+.btn::first-letter {
+  text-transform: uppercase;
+}
+/* === END HEADER === */
 
-/* === 4X OPIS === */
+/* === 4X DESCRIPTION === */
+.description {}
 .description-list {
   list-style-type: none;
+  display: flex;
+}
+.description-list .title-list:not(:last-child) {
+  margin-right: 30px;
+}
+.description-four-times {
+  padding-bottom: 0px;
 }
 .title-text {
   font-family: var(--main-font);
@@ -264,10 +285,17 @@ img {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-top: 10px;
+  width: 270px;
+  height: 75px;
+  text-align: start;
 }
-/* === END 4X OPIS === */
+.title-list {
+  text-align: start;
+}
+/* === END 4X DESCRIPTION === */
 
-/* === SECOND TITLE(S) === */
+/* === SECOND TITLE === */
 .second-title {
   font-family: var(--main-font);
   font-style: normal;
@@ -277,19 +305,75 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 50px;
 }
-/* === END SECOND TITLE(S) === */
+/* === END SECOND TITLE === */
 
-/* ===--- CZYM SIĘ ZAJMUJEMY (zdjęcia) /// ZESPÓŁ /// PROJECT/IMAGES---=== */
-.team {
-  background-color: #F5F4FA;
-}
+/* ===--- WHAT WE DO /// TEAM /// PROJECT/IMAGES---=== */
+
 .item-list {
+  display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-/* ===--- END CZYM SIĘ ZAJMUJEMY (zdjęcia) /// ZESPÓŁ /// PROJECT/IMAGES ---=== */
+.image-list:not(:last-child) {
+  margin-right: 30px;
+}
+/* === LIST LIST LIST ===*/
+.list:not(:last-child) {
+margin-right: 30px;
+}
+/* === LIST LIST LIST ===*/
+/* PHOTO-LIST */
+.photo-list:nth-of-type(3n + 1) {
+  margin-right: 30px;
+}
+.photo-list:nth-of-type(3n + 2) {
+  margin-right: 30px;
+}
+.photo-list {
+  margin-bottom: 30px;
+}
+.nine-images.section {
+  padding-top: 0px;
+}
+.portfolio-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* END PHOTO-LIST */
+/* ===--- END WHAT WE DO /// TEAM /// PROJECT/IMAGES ---=== */
 
-/* === ZESPÓŁ ===*/
+/* === TEAM ===*/
+.employee .container{
+  display: flex;
+}
+.projects-title {
+  padding-left: 24px;
+}
+.projects-description {
+  padding-left: 24px;
+}
+.image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.image-projects {
+  margin-bottom: 20px;
+}
+.image-list {
+  background-color: #FFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 3px rgba(0, 0, 0, 0.14),
+  0px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .third-title {
   font-family: var(--main-font);
   font-style: normal;
@@ -299,6 +383,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 10px;
 }
 .worker {
   font-family: var(--main-font);
@@ -309,15 +394,46 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 10px;
 }
 .team {
-  background-color: #f5f4fa;
+  background-color: #F5F4FA;
 }
-/* === END ZESPÓŁ ===*/
+/* === END TEAM ===*/
 
 /* === BUTTON GROUP === */
+.btn-first {
+  width: 121px;
+  height: 38px;
+}
+.btn-second {
+  width: 93px;
+  height: 38px;
+}
+.btn-third {
+  width: 114px;
+  height: 38px;
+}
+.btn-fourth {
+  width: 91px;
+  height: 38px;
+}
+.btn-fifth {
+  width: 121px;
+  height: 38px;
+}
+.buttons-section.section {
+  padding-bottom: 50px;
+}
 .btn-group {
   list-style-type: none;
+  justify-content: center;
+  display: flex;
+  /* padding-right: 518px;
+  padding-left: 510px; */
+}
+.list-group:not(:last-child) {
+  margin-right: 8px;
 }
 .btn-item {
   background: #f5f4fa;
@@ -331,10 +447,14 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  padding: 6px 22px;
 }
 .btn-item:hover,
 .btn-item:focus {
   background-color: var(--main-color);
+  color: #FFF;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .btn-item:active {
   background-color: var(--secondary-color);
@@ -342,6 +462,14 @@ img {
 /* === END BUTTON GROUP === */
 
 /* PROJECTS/IMAGES */
+/* do other??? */
+.border-text {
+  background: #fff;
+  border-right: 1px solid #757575;
+  border-bottom: 1px solid #757575;
+  border-left: 1px solid #757575;
+  /* box-sizing: border-box; */
+}
 .image-projects {
   width: 370px;
   height: 294px;
@@ -354,6 +482,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+  margin-bottom: 4px;
 }
 .projects-description {
   font-family: var(--main-font);
@@ -363,5 +492,21 @@ img {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: #757575;
+  padding-bottom: 20px;
 }
 /* END PROJECTS/IMAGES */
+/* FOOTER */
+.footer-logo {
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+.background-color-footer {
+  background-color: #2F303A;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.adress {
+  text-align: start;
+}
+/* END FOOTER */
