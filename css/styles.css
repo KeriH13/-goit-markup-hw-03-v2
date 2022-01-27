@@ -47,7 +47,6 @@
 body {
   font-family: var(--main-font);
   background-color: #ffffff;
-  width: 1600px;
 }
 h1, h2, h3, h4, h5, h6 , p ,ul, ol{
   text-align: center;
@@ -59,13 +58,6 @@ img {
 }
 /* === LOGO === */
 .logo {
-  /* 
-    position: absolute;  <-- co to robi? 
-    width: 145px;
-    height: 31px;
-    left: 215px;
-    top: 24px;  */
-
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: bold;
@@ -185,9 +177,6 @@ img {
   height: 80px;
   padding: 24px auto;
 }
-.section {
-  padding: 94px 215px;
-}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -217,8 +206,10 @@ img {
 .big-title {
   /*--- DODATEK dla widoczności--- */
   background-color: #2f303a;
-  padding: 200px 452px;
   display: flex; 
+  justify-content: center;
+  height: 600px;
+  align-items: center;
 }
 .btn {
   background: var(--main-color);
@@ -265,7 +256,7 @@ img {
   margin-right: 30px;
 }
 .description-four-times {
-  padding-bottom: 0px;
+  margin: 94px auto;
 }
 .title-text {
   font-family: var(--main-font);
@@ -310,7 +301,10 @@ img {
 /* === END SECOND TITLE === */
 
 /* ===--- WHAT WE DO /// TEAM /// PROJECT/IMAGES---=== */
-
+.what-we-do {
+  margin-bottom: 94px;
+  /* height: 386px; different section structure than BELOW (OUR TEAM) */
+}
 .item-list {
   display: flex;
   list-style-type: none;
@@ -398,9 +392,16 @@ margin-right: 30px;
 }
 .team {
   background-color: #F5F4FA;
+  padding-top: 94px;
+  height: 648px;
 }
 /* === END TEAM ===*/
-
+/* PORTFOLIO SECTION ALL OF THEM */
+.portfolio-section {
+  min-height: 1360px; /* is it ok? */
+  margin-top: 94px;
+  margin-bottom: 64px; /* margin-bottom: 30px have li */ 
+}
 /* === BUTTON GROUP === */
 .btn-first {
   width: 121px;
@@ -422,8 +423,8 @@ margin-right: 30px;
   width: 121px;
   height: 38px;
 }
-.buttons-section.section {
-  padding-bottom: 50px;
+.buttons-section {
+  margin-bottom: 50px;
 }
 .btn-group {
   list-style-type: none;
@@ -497,16 +498,20 @@ margin-right: 30px;
 /* END PROJECTS/IMAGES */
 /* FOOTER */
 .footer-logo {
-  padding-top: 60px;
-  margin-bottom: 20px;
+  /* padding-top: 60px;
+  margin-bottom: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.background-color-footer {
+footer {
   background-color: #2F303A;
-  padding-bottom: 60px;
-  padding-left: 15px;
-  padding-right: 15px;
+  height: 252px;
 }
 .adress {
   text-align: start;
+}
+.studio-item-footer {
+  color:#fff;
 }
 /* END FOOTER */
