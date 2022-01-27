@@ -498,15 +498,16 @@ margin-right: 30px;
 /* END PROJECTS/IMAGES */
 /* FOOTER */
 .footer-logo {
-  /* padding-top: 60px;
-  margin-bottom: 20px; */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* margin-bottom: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 footer {
   background-color: #2F303A;
-  height: 252px;
+  /* height: 252px;  */
 }
 .adress {
   text-align: start;
@@ -515,3 +516,7 @@ footer {
   color:#fff;
 }
 /* END FOOTER */
+
+/* nie wiem jaki jest sens ustawiania height sekcji na sztywno,
+jeeli mamy się uczyć pisać strony responsywne. W footerze nie wiem 
+jak wycentrować go flexem, więc ustawiłem padding-ami.*/ 
