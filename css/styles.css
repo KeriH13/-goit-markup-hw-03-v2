@@ -347,9 +347,6 @@ margin-right: 30px;
 .employee .container{
   display: flex;
 }
-.projects-title {
-  padding-left: 24px;
-}
 .projects-description {
   padding-left: 24px;
 }
@@ -357,9 +354,6 @@ margin-right: 30px;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-}
-.image-projects {
-  margin-bottom: 20px;
 }
 .image-list {
   background-color: #FFF;
@@ -466,10 +460,11 @@ margin-right: 30px;
 /* do other??? */
 .border-text {
   background: #fff;
-  border-right: 1px solid #757575;
-  border-bottom: 1px solid #757575;
-  border-left: 1px solid #757575;
-  /* box-sizing: border-box; */
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  padding-top: 20px;
+  justify-content: flex-start;
 }
 .image-projects {
   width: 370px;
@@ -484,6 +479,8 @@ margin-right: 30px;
   letter-spacing: 0.06em;
   color: #212121;
   margin-bottom: 4px;
+  padding-left: 24px;
+  display: flex;
 }
 .projects-description {
   font-family: var(--main-font);
@@ -494,6 +491,8 @@ margin-right: 30px;
   letter-spacing: 0.03em;
   color: #757575;
   padding-bottom: 20px;
+  padding-left: 24px;
+  display: flex;
 }
 /* END PROJECTS/IMAGES */
 /* FOOTER */
@@ -516,7 +515,3 @@ footer {
   color:#fff;
 }
 /* END FOOTER */
-
-/* nie wiem jaki jest sens ustawiania height sekcji na sztywno,
-jeeli mamy się uczyć pisać strony responsywne. W footerze nie wiem 
-jak wycentrować go flexem, więc ustawiłem padding-ami.*/ 
